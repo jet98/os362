@@ -84,7 +84,7 @@ public class Exercise1
         {
             String binary = Integer.toBinaryString(i);
             binary= Standerdize(binary);
-            m_map.put(binary,"");
+            m_map.put(binary,"00000000");
             test[i] = binary;
         }
     }
