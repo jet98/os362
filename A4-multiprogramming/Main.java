@@ -11,12 +11,12 @@ public class Main {
 
   private void go() throws Exception {
     Scanner in = new Scanner(System.in);
-    // System.out.println("Please enter file 1:");
-    // String file1 = in.nextLine();
-    // System.out.println("Please enter file 2:");
-    // String file2 = in.nextLine();
-    final matrix a = new matrix("./A1.txt");
-    final matrix b = new matrix("./B1.txt");
+    System.out.println("Please enter file 1:");
+    String file1 = in.nextLine();
+    System.out.println("Please enter file 2:");
+    String file2 = in.nextLine();
+    final matrix a = new matrix("./" + file1);
+    final matrix b = new matrix("./" + file2);
     assert (a.getRows() == b.getCols());
     final matrix c = new matrix(a.getRows(), b.getCols());
     int pool = 6;
