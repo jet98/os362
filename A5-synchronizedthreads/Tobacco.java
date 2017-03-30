@@ -1,6 +1,9 @@
-public class Tobacco extends Smoker{
- 	@Override
- 	public Boolean call(){
- 	    
- 	}
+import java.util.concurrent.*;
+
+public class Tobacco extends Supplier{
+  public synchronized void grab() throws InterruptedException{
+    if(this.grabTobacco(this)){
+      this.grabTobacco(this);
+    }
+  }
 }

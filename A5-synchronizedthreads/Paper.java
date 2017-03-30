@@ -1,6 +1,9 @@
-public class Paper extends Smoker{
-    @Override
- 	public Boolean call(){
- 	    
- 	}
+import java.util.concurrent.*;
+
+public class Paper extends Supplier{  
+  public synchronized void grab() throws InterruptedException{
+    if(this.grabPaper(this)){
+      this.grabPaper(this);
+    }
+  }
 }
